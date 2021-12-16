@@ -38,6 +38,8 @@ is_goal = false;
 stop_flag = false
 i = 1
 figure(1)
+xlabel('X')
+ylabel('Y')
 xlim([0,5])
 ylim([0,5])
 scatter(ob_x, ob_y, 'x', 'r', 'Linewidth', 15);
@@ -49,11 +51,14 @@ while stop_flag~= true
     is_goal = false;
     reward_all = 0;
    	clf
-    xlim([0,10])
-    ylim([0,10])
     scatter(ob_x, ob_y, 'x', 'r', 'Linewidth', 15);
     hold on;
     scatter(end_x, end_y, 'd', 'g', 'Linewidth', 15);
+    xlabel('X')
+    ylabel('Y')
+    xlim([0,10])
+    ylim([0,10])
+
     hold on;
     grid on;
     tic
@@ -84,7 +89,8 @@ while stop_flag~= true
 end
 figure(2)
 plot(run)
-             
+xlabel('Episode')
+ylabel('Reward')
 
 %% Env definition
 % The reward could be redesigned what you want.
